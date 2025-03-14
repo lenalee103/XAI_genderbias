@@ -1,0 +1,26 @@
+I made the following changes
+
+(1) I also dropped TIV, as it significantly differs between males and females in general (females have a 10% smaller brain compared to females)
+df = df.drop(['ID', 'TIV'], axis=1) 
+
+
+(2) the privileged group is males with the label 0, so 
+    favorable_label=0,
+    unfavorable_label=1
+    
+(3) I added grid searches for SVM and XGBoost
+
+(4) Validation and Testsets are evaluated, however, everything regarding validation set is commented and not part of the ms
+
+(5) I added the calculatoin and visualization of optimal classification threshold (in case, a reviewer would like to know;-)
+(6) I added further output metrics
+(7) I added XAI for osiginal and debiased models
+
+(8) All models are included within the code: 
+Adversarial Debiasing and Prejudice Remover after Scaling/SMOTE
+calibrated Equal Odds Post-processing after model interpretation of the original model
+Reweighing and Disparate Impact Remover after this
+
+
+
+
